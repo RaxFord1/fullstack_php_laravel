@@ -74,11 +74,11 @@ class PostController extends Controller
             'text' => 'required|string',
         ]);
 
-        $post::update($data);
+        $post->update($data);
 
         // DB::update('update posts set title = ?, text = ? where id = ?', [$data['title'], $data['text'], $post->id]);
 
-        return redirect()->route('post.show', $post->id);
+        return redirect()->route('posts.show', $post->id);
     }
 
     /**
